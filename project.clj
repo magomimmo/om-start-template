@@ -1,6 +1,6 @@
 (defproject om-start/lein-template "0.0.1"
   :description "A lein-template for creating OM project"
-  :url "https://github.com/magomimmo/om-start"
+  :url "https://github.com/magomimmo/om-start-template"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :min-lein-version "2.3.4"
