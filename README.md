@@ -1,7 +1,7 @@
 # om-start
 
-A Leiningen template for creating [OM][1] projects compatible with
-editors/IDEs which are compliant with nREPL.
+A Leiningen template for creating [OM][1] projects compatible with an
+nREPL compliant editors/IDEs.
 
 ## Quick start
 
@@ -33,7 +33,7 @@ and then
 (browser-repl) ; to run the Browser Connected REPL
 ```
 
-Finally, visit the `http://localhost:3000` URL to activate the Crowser
+Finally, visit the `http://localhost:3000` URL to activate the Browser
 Connected REPL.
 
 You're now ready to follow the [David Nolen][2] [Tutorial on OM][3]
@@ -46,7 +46,7 @@ form and type `C-c C-e`.
 
 ### Eclipse/CCW  quick start
 
-Start [CCW][5] by [Laurent Petit][6] for creating a new `Clojure
+Start [CCW][5] by [Laurent Petit][6] and create a new `Clojure
 Project` based on the `om-start` lein-template.
 
 ```bash

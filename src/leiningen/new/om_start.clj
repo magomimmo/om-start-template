@@ -1,5 +1,5 @@
 (ns leiningen.new.om-start
-  "Generate an OM project ready for nrepl compliant editors/IDEs"
+  "Generate an OM project for nREPL compliant editors/IDEs"
   (:require [leiningen.new.templates :refer [renderer
                                              multi-segment
                                              sanitize-ns
@@ -11,7 +11,7 @@
             [leiningen.core.main :as main]))
 
 (defn om-start
-  "A general project template for OM project"
+  "A lein template for creating nREPL compliant OM project"
   [name]
   (let [render (renderer "om-start")
         main-ns (multi-segment (sanitize-ns name))
