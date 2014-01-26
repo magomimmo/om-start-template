@@ -75,6 +75,9 @@ ClojureScript REPL and you are ready to follow the [David Nolen][2]
 Open the `core.cljs` source code in the editor and evaluate it form by
 form starting from the namespace declaration.
 
+> ATTENTION NOTE: `om-start` does not use `:none` optimization and
+> this is because [austin][7] does not support it. 
+
 ## License
 
 Copyright © 2014 Mimmo Cosenza (aka @magomimmo)
@@ -88,7 +91,7 @@ your option) any later version.
 [4]: http://www.lighttable.com/
 [5]: https://github.com/laurentpetit/ccw
 [6]: https://github.com/laurentpetit
-
+[7]: https://github.com/cemerick/austin
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/magomimmo/om-start-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
