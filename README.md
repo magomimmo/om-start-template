@@ -88,3 +88,7 @@ your option) any later version.
 [4]: http://www.lighttable.com/
 [5]: https://github.com/laurentpetit/ccw
 [6]: https://github.com/laurentpetit
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/magomimmo/om-start-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
