@@ -75,6 +75,44 @@ ClojureScript REPL and you are ready to follow the [David Nolen][2]
 Open the `core.cljs` source code in the editor and evaluate it form by
 form starting from the namespace declaration.
 
+### Vim/fireplace quick start
+
+Requires [vim-fireplace][8].
+
+Start by creating a new OM project based on `om-start` lein-template and
+launching the repl.
+
+```bash
+lein new om-start om-tut
+cd om-tut
+lein repl
+```
+
+`lein repl` will require some time to download dependencies and compile the
+ClojureScript code.  Once the nREPL is ready, evaluate the following Clojure
+forms:
+
+```clj
+(run) ; to run the included http server server.
+```
+
+Then open the generated `core.cljs` file in Vim from the
+`src/cljs/om-tut` directory and enter the command
+
+```vim
+:Piggieback (browser-repl-env)
+```
+Finally, visit the `http://localhost:3000` URL to activate the Browser
+Connected REPL.
+
+You're now ready to follow the [David Nolen][2] [Tutorial on OM][3]
+with the same kind of `live` experience he reached with
+[Light Table][4].
+
+Evaluate `core.cljs` file form by form starting from the namespace
+declaration. To do that just position your cursor at the end of each
+top-level form and type `cpp`.
+
 > ATTENTION NOTE: `om-start` does not use `:none` optimization and
 > this is because [austin][7] does not support it. 
 
@@ -92,6 +130,7 @@ your option) any later version.
 [5]: https://github.com/laurentpetit/ccw
 [6]: https://github.com/laurentpetit
 [7]: https://github.com/cemerick/austin
+[8]: https://github.com/tpope/vim-fireplace
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/magomimmo/om-start-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

@@ -20,10 +20,12 @@
                    :compiler
                    {:optimizations :whitespace
                     :pretty-print true}}}}
-        
+
         :injections [(require '[ring.server :as http :refer [run]]
                               'cemerick.austin.repls)
+                     (defn browser-repl-env []
+                       (reset! cemerick.austin.repls/browser-repl-env
+                                (cemerick.austin/repl-env)))
                      (defn browser-repl []
-                       (cemerick.austin.repls/cljs-repl 
-                        (reset! cemerick.austin.repls/browser-repl-env
-                                (cemerick.austin/repl-env))))]}]}
+                       (cemerick.austin.repls/cljs-repl
+                         (browser-repl-env)))]}]}
