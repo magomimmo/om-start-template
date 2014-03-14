@@ -132,5 +132,3 @@ your option) any later version.
 [7]: https://github.com/cemerick/austin
 [8]: https://github.com/tpope/vim-fireplace
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/magomimmo/om-start-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
