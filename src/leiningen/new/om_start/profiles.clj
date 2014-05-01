@@ -12,8 +12,8 @@
         :source-paths ["dev-resources/tools/http" "dev-resources/tools/repl"]
         :dependencies [[ring "1.2.1"]
                        [compojure "1.1.6"]
-                       [enlive "1.1.5"]]
-        :plugins [[com.cemerick/austin "0.1.3"]]
+                       [hickory "0.5.3"]]
+        :plugins [[com.cemerick/austin "0.1.4"]]
         :cljsbuild
         {:builds {:{{name}}
                   {:source-paths ["dev-resources/tools/repl"]
