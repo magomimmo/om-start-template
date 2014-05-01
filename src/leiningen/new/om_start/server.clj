@@ -1,17 +1,36 @@
 ;;; This namespace is used for development and testing purpose only.
 (ns ring.server
   (:require [cemerick.austin.repls :refer (browser-connected-repl-js)]
-            [net.cgrand.enlive-html :as enlive]
             [compojure.route :refer  (resources)]
             [compojure.core :refer (GET defroutes)]
             [ring.adapter.jetty :as jetty]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [clojure.zip :as zip]
+            [hickory.core :as hc]
+            [hickory.render :as hr]
+            [hickory.select :as hs]
+            [hickory.zip :as hz]))
 
-(enlive/deftemplate page
-  (io/resource "public/index.html")
-  []
-  [:body] (enlive/append
-            (enlive/html [:script (browser-connected-repl-js)])))
+(defn repl-js-script []
+  (-> (str "<script>" (browser-connected-repl-js) "</script>")
+      hc/parse-fragment
+      first
+      hc/as-hickory))
+
+(defn original-page []
+  (-> "public/index.html"
+      io/resource
+      slurp
+      hc/parse
+      hc/as-hickory))
+
+(defn page []
+  (->> (original-page)
+       hz/hickory-zip
+       (hs/select-next-loc (hs/tag :body))
+       (#(zip/append-child % (repl-js-script)))
+       zip/root
+       hr/hickory-to-html))
 
 (defroutes site
   (resources "/")
