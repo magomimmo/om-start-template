@@ -56,8 +56,7 @@ Project Name: om-tut
 Leiningen teamplate: om-start
 ```
 
-From the contextual menu of the project select `Leiningen > Launch
-Headless REPL for the Project`.
+From the contextual menu of the project select `Run as > Clojure Application`.
 
 The command needs sometime to compile the ClojureScript code and to
 run the nREPL server and client. So, be patient.
