@@ -125,7 +125,7 @@ your option) any later version.
 
 [1]: https://github.com/swannodette/om
 [2]: https://github.com/swannodette
-[3]: https://github.com/swannodette/om/wiki/Tutorial 
+[3]: https://github.com/swannodette/om/wiki/Basic-Tutorial
 [4]: http://www.lighttable.com/
 [5]: https://github.com/laurentpetit/ccw
 [6]: https://github.com/laurentpetit
