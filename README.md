@@ -87,7 +87,7 @@ lein new om-start om-tut
 This project can then be opened in IntelliJ IDEA. There is however a [bug in lein-cljsbuild][10] which [prevents Cursive from launching a REPL the normal way][11], from inside the IDE. As a workaround, the REPL can be launched from the command line.
 
 ```bash
-lein repl :headless :host 0.0.0.0 :port 4242
+lein repl :headless :port 4242
 ```
 
 After this, you can connect to the nREPL running on localhost:4242 using a "remote REPL" run configuration. 
