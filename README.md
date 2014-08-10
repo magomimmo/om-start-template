@@ -74,6 +74,32 @@ ClojureScript REPL and you are ready to follow the [David Nolen][2]
 Open the `core.cljs` source code in the editor and evaluate it form by
 form starting from the namespace declaration.
 
+### IntelliJ IDEA/Cursive quick start
+
+Requires the [Cursive][9] plugin for IntelliJ IDEA.
+
+Start by creating a new project based on the `om-start` Leiningen template.
+
+``` 
+lein new om-start om-tut
+```
+
+This project can be opened in IntelliJ IDEA. There is however a [bug in lein-cljsbuild][10] which [prevents Cursive from launching a REPL the normal way][11], from inside the IDE. As a workaround, the REPL can be launched from the command line.
+
+When ready, visit the `http://localhost:3000` URL to activate the
+ClojureScript REPL and you are ready to follow the [David Nolen][2]
+[Tutorial on OM][3].
+
+Open the `core.cljs` source code in the editor and evaluate it form by
+form starting from the namespace declaration.
+
+```bash
+lein repl :headless :host 0.0.0.0 :port 4242
+```
+
+After this, you can connect to the nREPL running on localhost:4242 using a "remote REPL" run configuration. 
+Start the server by evaluating the `(run)` form and then start the Browser Connected REPL by evaluating the `(browser-repl)` form. 
+
 ### Vim/fireplace quick start
 
 Requires [vim-fireplace][8].
@@ -130,4 +156,7 @@ your option) any later version.
 [6]: https://github.com/laurentpetit
 [7]: https://github.com/cemerick/austin
 [8]: https://github.com/tpope/vim-fireplace
+[9]: https://cursiveclojure.com
+[10]: https://github.com/emezeske/lein-cljsbuild/issues/204
+[11]: https://github.com/cursiveclojure/cursive/issues/369
 
