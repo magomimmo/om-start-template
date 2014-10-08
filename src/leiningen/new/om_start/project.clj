@@ -9,13 +9,13 @@
 
   :source-paths ["src/clj" "src/cljs"]
 
-  :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-2156"]
-                 [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
-                 [om "0.5.0"]
-                 [com.facebook/react "0.9.0"]]
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [org.clojure/clojurescript "0.0-2342"]    
+                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]
+                 [om "0.7.3"]
+                 [com.facebook/react "0.11.2"]]
   
-  :plugins [[lein-cljsbuild "1.0.2"]]
+  :plugins [[lein-cljsbuild "1.0.3"]]
 
   :hooks [leiningen.cljsbuild]
 
@@ -23,6 +23,8 @@
   {:builds {:{{name}}
             {:source-paths ["src/cljs"]
              :compiler
-             {:output-to "dev-resources/public/js/{{sanitized}}.js"
+             {:output-dir "dev-resources/public/js"
+              :output-to "dev-resources/public/js/{{sanitized}}.js"
+              :source-map "dev-resources/public/js/{{sanitized}}.js.map"
               :optimizations :advanced
               :pretty-print false}}}})
